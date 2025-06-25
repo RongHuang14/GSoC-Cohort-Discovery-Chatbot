@@ -3,6 +3,7 @@
 A simple application built with LangChain and FastAPI that converts natural language queries into GraphQL queries.
 
 ## Installation
+python version >= 3.9.0
 
 1. After cloning the project, install dependencies:
 ```bash
