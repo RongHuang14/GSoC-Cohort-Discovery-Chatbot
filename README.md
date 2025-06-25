@@ -42,42 +42,8 @@ curl -X POST "http://localhost:8000/convert" \
 }
 ```
 
-## Frontend Demo
-
-You can also test the application using a simple HTML frontend.
-
-### index.html
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>LangChain GraphQL Demo</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    input, button { font-size: 1em; }
-    #result { margin-top: 20px; white-space: pre-wrap; }
-  </style>
-</head>
-<body>
-  <h2>LangChain GraphQL Demo</h2>
-  <input id="queryInput" type="text" placeholder="Enter your question..." size="40">
-  <button onclick="sendQuery()">Send</button>
-  <div id="result"></div>
-  <script>
-    async function sendQuery() {
-      const text = document.getElementById('queryInput').value;
-      document.getElementById('result').innerText = 'Loading...';
-      const res = await fetch('http://localhost:8000/convert', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text })
-      });
-      const data = await res.json();
-      document.getElementById('result').innerText = JSON.stringify(data, null, 2);
-    }
-  </script>
-</body>
-</html>
-``` 
+## Frontend(Chainlit)
+Start with auth (Required by Chainlit https://docs.chainlit.io/data-persistence/history):
+```bash
+./start_with_auth.sh
+```
