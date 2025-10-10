@@ -4,7 +4,7 @@
 
 **Contributor**: **Regina Huang**
 
-**Email:** huang.rong@northeastern.edu
+**Email:** reginahuang.me@gmail.com / huang.rong@northeastern.edu
 
 **Github profile**: https://github.com/RongHuang14
 
